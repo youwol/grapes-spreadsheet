@@ -51,18 +51,18 @@ const mainEntry : {entryFile: string,loadDependencies:string[]} = {
 const secondaryEntries : {[k:string]:{entryFile: string, name: string, loadDependencies:string[]}}= {}
 
 const entries = {
-     '@youwol/yw-spreadsheet': './index.ts',
-    ...Object.values(secondaryEntries).reduce( (acc,e) => ({...acc, [`@youwol/yw-spreadsheet/${e.name}`]:e.entryFile}), {})
+     '@youwol/grapes-spreadsheet': './index.ts',
+    ...Object.values(secondaryEntries).reduce( (acc,e) => ({...acc, [`@youwol/grapes-spreadsheet/${e.name}`]:e.entryFile}), {})
 }
 export const setup = {
-    name:'@youwol/yw-spreadsheet',
-        assetId:'QHlvdXdvbC95dy1zcHJlYWRzaGVldA==',
-    version:'0.1.0-wip',
-    shortDescription:"",
-    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/yw-spreadsheet',
-    npmPackage:'https://www.npmjs.com/package/@youwol/yw-spreadsheet',
-    sourceGithub:'https://github.com/youwol/yw-spreadsheet',
-    userGuide:'https://l.youwol.com/doc/@youwol/yw-spreadsheet',
+    name:'@youwol/grapes-spreadsheet',
+        assetId:'QHlvdXdvbC9ncmFwZXMtc3ByZWFkc2hlZXQ=',
+    version:'0.1.1-wip',
+    shortDescription:"Plugin uses with @youwol/story to extract spreadsheets",
+    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/grapes-spreadsheet',
+    npmPackage:'https://www.npmjs.com/package/@youwol/grapes-spreadsheet',
+    sourceGithub:'https://github.com/youwol/grapes-spreadsheet',
+    userGuide:'https://l.youwol.com/doc/@youwol/grapes-spreadsheet',
     apiVersion:'01',
     runTimeDependencies,
     externals,
@@ -88,7 +88,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/yw-spreadsheet_APIv01`]
+            return window[`@youwol/grapes-spreadsheet_APIv01`]
         })
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
@@ -103,7 +103,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/yw-spreadsheet#0.1.0-wip~dist/@youwol/yw-spreadsheet/${entry.name}.js`
+            `@youwol/grapes-spreadsheet#0.1.1-wip~dist/@youwol/grapes-spreadsheet/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
@@ -114,7 +114,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/yw-spreadsheet/${entry.name}_APIv01`]
+            return window[`@youwol/grapes-spreadsheet/${entry.name}_APIv01`]
         })
     },
     getCdnDependencies(name?: string){
