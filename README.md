@@ -1,19 +1,19 @@
-# @youwol/yw-spreadsheet
+# @youwol/grapes-spreadsheet
 
-
+Plugin uses with @youwol/story to extract spreadsheets
 
 This library is part of the hybrid cloud/local ecosystem
 [YouWol](https://platform.youwol.com/applications/@youwol/platform/latest).
 
 ## Links
 
-[Online user-guide](https://l.youwol.com/doc/@youwol/yw-spreadsheet)
+[Online user-guide](https://l.youwol.com/doc/@youwol/grapes-spreadsheet)
 
-[Developers documentation](https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/yw-spreadsheet)
+[Developers documentation](https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/grapes-spreadsheet)
 
-[Package on npm](https://www.npmjs.com/package/@youwol/yw-spreadsheet)
+[Package on npm](https://www.npmjs.com/package/@youwol/grapes-spreadsheet)
 
-[Source on GitHub](https://github.com/youwol/yw-spreadsheet)
+[Source on GitHub](https://github.com/youwol/grapes-spreadsheet)
 
 # Installation, Build, Test
 
