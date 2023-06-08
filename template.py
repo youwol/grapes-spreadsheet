@@ -3,12 +3,11 @@ from pathlib import Path
 
 from youwol.pipelines.pipeline_typescript_weback_npm import Template, PackageType, Dependencies, \
     RunTimeDeps, generate_template, Bundles, MainModule
-from youwol_utils import parse_json
+from youwol.utils import parse_json
 
 folder_path = Path(__file__).parent
 
 pkg_json = parse_json(folder_path / 'package.json')
-
 
 template = Template(
     path=folder_path,
@@ -20,16 +19,19 @@ template = Template(
     dependencies=Dependencies(
         runTime=RunTimeDeps(
             externals={"@youwol/cdn-client": "^1.0.2", "@youwol/flux-view": "^1.0.3", "rxjs": "^6.5.5"}
-        )
+        ),
+        devTime={
+            'grapesjs': "0.18.3", 'xlsx': '0.18.5'
+        }
     ),
     bundles=Bundles(
-          mainModule=MainModule(
-              entryFile='./index.ts',
-              loadDependencies=["@youwol/cdn-client", "@youwol/flux-view", "rxjs"]
-          )
-        ),
+        mainModule=MainModule(
+            entryFile='./index.ts',
+            loadDependencies=["@youwol/cdn-client", "@youwol/flux-view", "rxjs"]
+        )
+    ),
     userGuide=True
-    )
+)
 
 generate_template(template)
 shutil.copyfile(
